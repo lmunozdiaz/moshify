@@ -5,7 +5,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
-  --color-body-darker: #5c5577
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -190,7 +190,7 @@ a {
 }
 
 .icon-container--accent {
-  background: var(--color-accent)
+  background: var(--color-accent);
 }
 
 /* Buttons */
@@ -201,10 +201,18 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -283,7 +291,7 @@ a {
 .input-group .input {
   border: none;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -424,7 +432,7 @@ a {
 
 .quote__company {
   color: var(--color-headings);
-  opacity: .4;
+  opacity: 0.4;
   font-size: 2rem;
   font-style: normal;
 }
@@ -525,11 +533,11 @@ a {
   .callout .grid--cols-2 {
     grid-template-columns: 1fr auto;
   }
-  
+
   .callout__content {
     text-align: left;
   }
-  
+
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
@@ -632,7 +640,7 @@ a {
 }
 
 .nav__item > a:hover {
-  color: #fff
+  color: #fff;
 }
 
 .nav__toggler {
@@ -689,9 +697,34 @@ a {
   .hero {
     padding-top: 0;
   }
-  
+
   .hero__content {
-    text-align: left;
     align-self: center;
+    text-align: left;
+  }
+}
+
+/* Domain Block */
+.block-domain .input-group {
+  border: none;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  font-size: 2rem;
+  font-weight: 600;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
